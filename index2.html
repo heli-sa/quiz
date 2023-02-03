@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>quiz</title>
-     <script defer src="/assets/js/script.js"></script>
+    <!-- <script defer src="/assets/js/script.js"></script> -->
     <meta name="description" content="quiz, questions-answers ">
     <meta name="keywords" content="quiz">
-    <link rel="stylesheet" href="assets/css/style.css">
+     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
 </head>
 
+
 <body onload="nextQuestion(0)">
-    <!-- <header>Test Quiz 1</header> -->
     <main>
         <div class="container" id="score">
             <div class="quiz_container">
@@ -26,20 +26,18 @@
                     <p>Grade : <span id="grade"></span>%</p>
                     <p><span id="comments"></span></p>
                 </div>
-<!-- 
+
                 <div class="btn">
                     <button onclick="score_c()">Continue</button>
-                </div> -->
+                </div>
             </div>
         </div>
-    
-     
+         
         <div class="quiz_cont">
 
             <div class="quiz_det">
                 <h1>Score : <span id="p_score"></span> / 10</h1>
-                 <h1> Question : <span id="q_num"></span> / 10</h1>
-                
+                <h1> Question : <span id="q_num"></span> / 10</h1>
             </div>
             <div class="game">
                 <h1 id="question"></h1>
@@ -52,32 +50,31 @@
                         <h1>Make The Right Choice</h1>
                     
                     <div class="btn">
-                        <button onclick="closeChoose()">Continue</button>
-                        </div>
+                        <button onclick="closeChoose">Continue</div>
                 </div>
             </div>    
             <span>
-                <span>
-                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
-                    <label for="option-one" class="option" id="one-label"></label>
-                </span>
+                <input type="radio" id="one" name="option" class="radio" value="optionA" />
+                <label for="one" class="option" id="one"></label>
             </span>
             <span>
                 <input type="radio" id="two" name="option" class="radio" value="optionB" />
-                <label for="two" class="option" id="two-label"></label>
+                <label for="two" class="option" id="two"></label>
             </span>
             <span>
                 <input type="radio" id="three" name="option" class="radio" value="optionC" />
-                <label for="three" class="option" id="three-label"></label>
+                <label for="three" class="option" id="three"></label>
             </span>
             <span>
                 <input type="radio" id="four" name="option" class="radio" value="optionD" />
-                <label for="four" class="option" id="four-label"></label>
+                <label for="four" class="option" id="four"></label>
             </span>
 
             <div class="next_btn">
-                <button onclick="handleNextQuestion()">Next Question!!!!</button>
+                <button onclick="handleNextQuestion()">Next Question</button>
             </div>
-          
+            
+            <!-- Script -->
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>

@@ -12,10 +12,13 @@ body {
 
 body {
     font-family: 'Montserrat', serif;
+   
 
 }
 
 main { 
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,8 +27,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100%;
-    min-height: 100vh;
+    
 }
 
 .quiz_cont {
@@ -126,7 +128,7 @@ main {
     overflow: hidden;
     width: 45%;
     height: 3rem;
-    border: 2px solid rgb(222, 56, 56);
+    border: 2px solid rgb(229, 13, 13);
     border-radius: 20px;
 }
 
@@ -187,6 +189,41 @@ span label:hover {
     background-color: rgb(83, 82, 82);
 }
 
+.next_btn {
+    width: 50%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.next_btn button {
+    width: 8rem;
+    height: 2rem;
+    border-radius: 10px;
+    background: none;
+    color: rgb(25, 25, 25);
+    font-weight: 600;
+    border: 2px solid gray;
+    cursor: pointer;
+    outline: none;
+}
+.next-btn button:hover {
+    background-color: rgb(143, 93, 93);
+}
+
+.info {
+    flex-direction: column;
+    width: 15rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info p {
+    color:beige;
+    text-align: center;
+}
 
   
 
