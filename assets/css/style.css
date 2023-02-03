@@ -39,15 +39,27 @@ main {
     justify-content: space-around;
 }
 
+.quiz_det {
+    width: 80%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.quiz_det h1 {
+    font-size: 1.2;
+}
+
 .game {
-    border: 2px solid darkkhaki;
-    border-radius: 25px;
     width: 80%;
     height: 8rem;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    border: 2px solid darkgray;
+    border-radius: 25px;
+}    
 
 .container {
     width: 100%;
@@ -59,7 +71,6 @@ main {
     top: 0;
     overflow: auto;
     background-color: rgb(239, 59, 59);
-    background-color: rgba(40, 33, 33, 0.4);
     -webkit-animation: fadeIn 1.2s ease-in-out;
     animation: fadeIn 1.2s ease-in-out;
     flex-direction: column;
@@ -67,16 +78,23 @@ main {
     justify-content: center;
 }
 
-quiz_container{
+.quiz_container {
     align-items: center;
     justify-content: space-around;
     border-radius: 25px;
     height: 20rem;
     width: 25rem;
-    background-color: rgb(120, 177, 222);
+    background-color: rgb(194, 215, 232);
     display: flex;
     flex-direction: column;
     
+}
+
+.quiz_container h1 {
+    font-size: 1.3rem;
+    height: 3rem;
+    color: rgb(225, 89, 89);
+    text-align: center;
 }
 
 
@@ -88,9 +106,6 @@ quiz_container{
     height: 4rem;
 }
 
-.quiz_det h1 {
-    font-size: 1.2rem;
-}
 
 .game h1 {
     padding:3pm;
@@ -102,7 +117,7 @@ quiz_container{
     display: flex;
     flex-wrap: wrap;
     height: 12rem;
-    width: 45%;
+    width: 80%;
     justify-content: space-around;
     align-items: center;
 }
@@ -133,4 +148,46 @@ span label:hover {
     -webkit-transform: scale(1.12);
     -ms-transform: scale(1.12);
 } 
+
+.info {
+    width: 15rem;
+    height: 10rem;
+    align-items: center;    
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.info p {
+    color: yellowgreen;
+    text-align: center;
+}
+
+.btn {
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn button {
+    width: 10rem;
+    height: 2rem;
+    background: none;
+    outline: none;
+    border: 1px solid rgb(252, 242, 241);
+    color: rgb(220, 28, 102);
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.btn button:hover {
+    background-color: rgb(83, 82, 82);
+}
+
+
+  
+
 

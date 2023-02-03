@@ -9,11 +9,14 @@
     <meta name="keywords" content="quiz">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+
+
+<body onload="nextQuestion(0)">
     <main>
         <div class="container" id="score">
             <div class="quiz_container">
                 <h1>Congratulation!</h1>
+
                 <div class="info">
                     <p>Attempts : 10 </p>
                     <p>Wrong Answers : <span id="wrong"></span></p>
@@ -40,27 +43,28 @@
 
             <div class="game_opt"></div>
                 <div class="container" id="choose">
-                    <div class="quiz-container">
+                    < class="quiz_container">
                         <h1>Make The Right Choice</h1>
-                    </div>
-                    <div class="button">Continue</div>
+                    
+                    <div class="btn">
+                        <button onclick="closeChoose">Continue</div>
                 </div>
-   
+            </div>    
             <span>
                 <input type="radio" id="one" name="option" class="radio" value="optionA" />
-                <label for="one" class="option" id="one-label"></label>
+                <label for="one" class="option" id="one"></label>
             </span>
             <span>
                 <input type="radio" id="two" name="option" class="radio" value="optionB" />
-                <label for="two" class="option" id="two-label"></label>
+                <label for="two" class="option" id="two"></label>
             </span>
             <span>
                 <input type="radio" id="three" name="option" class="radio" value="optionC" />
-                <label for="three" class="option" id="three-label"></label>
+                <label for="three" class="option" id="three"></label>
             </span>
             <span>
                 <input type="radio" id="four" name="option" class="radio" value="optionD" />
-                <label for="four" class="option" id="four-label"></label>
+                <label for="four" class="option" id="four"></label>
             </span>
             
             <!-- Script -->
