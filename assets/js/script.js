@@ -58,6 +58,9 @@ var intervalID;
 var time;
 var currentQuestion;
 
+//empty array to hold shuffled selected 
+let randomQuestions = [];
+
 // Hide cards at the start
 function hideCards() {
     startCard.setAttribute("hidden", true);
@@ -70,7 +73,18 @@ function hideCards() {
   function hideResultText() {
     resultDiv.style.display = "none";
   }
-  
+
+function shuffleQuestions() { 
+    //function to shuffle and push 10 questions to shuffledQuestions array
+//app would be dealing with 10questions per session
+    while (randomQuestions.length <= 2) {
+        const random = questions[Math.floor(Math.random() * questions.length)]
+        if (!randomQuestions.includes(random)) {
+          randomQuestions.push(random)
+        }
+    }
+}
+
   // Start Quiz
   document.querySelector("#start-button").addEventListener("click", startQuiz);
   
@@ -79,6 +93,8 @@ function hideCards() {
     hideCards();
     questionCard.removeAttribute("hidden");
   
+    // Randomize/shuffle the questions array before starting quiz.
+    shuffleQuestions();
     //assign 0 to currentQuestion when start button is clicked, then display the current question on the page
     currentQuestion = 0;
     displayQuestion();
@@ -108,7 +124,10 @@ function hideCards() {
   }
   //display the question and answer options for the current question
   function displayQuestion() {
-    let question = questions[currentQuestion];
+   // Swap commented lines below to change from non-random to random 
+   // let question = questions[currentQuestion];
+    let question = randomQuestions[currentQuestion];
+    
     let options = question.options;
   
     let h2QuestionElement = document.querySelector("#question-text");
@@ -127,7 +146,10 @@ function hideCards() {
   
   //Compare the text content of the option button with the answer to the current question
   function optionIsCorrect(optionButton) {
-    return optionButton.textContent === questions[currentQuestion].answer;
+   // Swap commented lines below to change from non-random to random 
+//   return optionButton.textContent === questions[currentQuestion].answer;
+
+    return optionButton.textContent === randomQuestions[currentQuestion].answer;
   }
   
   //if answer is incorrect, penalise time
