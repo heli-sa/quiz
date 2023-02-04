@@ -25,22 +25,24 @@
 // Note: put option in code to read this array from JSON file (time permitting)
 const questions = [
   {
-    questionText: "Question 1 - First Question",
-    options: ["1. ans1", "2. ans2", "3. ans3", "4. ans4"],
-    answer: "3. ans3",
+    questionText: "Question 1 - How many days are in a leap year?",
+    options: ["1. 355 days", "2. 366 days", "3. 359 days", "4. 364 days"],
+    answer: "2. 366 days",
   },
   {
-    questionText: "Question 2 Second Question",
-    options: ["1. ans1", "2. ans2", "3. ans3", "4. ans4"],
-    answer: "4. ans4",
+    questionText: "Which five colors make up the Olympic rings?",
+    options: ["1. Black, green, blue, yellow and red", 
+              "2. Blue, green,yellow,black and white", 
+              "3. Green, white yellow, red and blue", 
+              "4. Black, green, blue, white and red"],
+    answer: "4. Black, green, blue, white and red",
   },
   {
-      questionText: "Question 3 Third Question",
-      options: ["1. ans1", "2. ans2", "3. ans3", "4. ans4"],
-      answer: "2. ans2",
+      questionText: "Which of the following sports does not use a ball?",
+      options: ["1. Tennis", "2. Golf", "3. Ice-Hockey", "4. Polo"],
+      answer: "3. Ice-Hockey",
   },
 ];
-
 // Create Global variables to display questions, scorecard, leaderboard
 // Time, intervalID
 const startCard = document.querySelector("#instructions");
