@@ -14,10 +14,10 @@
 
 </head>
 <body>
-    <header>Quiz Title goes here</header>
-    <a id=leaderboard-link>View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
-    </i></a>     
-    <time>Time: <span id="time"></span></time>
+    <header><h2>DO YOU KNOW...!!!</h2>
+    <a id=leaderboard-link>Leader Board</a>     
+    
+
 </header>
 
 </body>
@@ -32,6 +32,7 @@
     <!-- Card to display question-->
 
     <div hidden id=question class="card">
+        <time>Time: <span id="time"></span></time>
 
         <h2 id=question-text></h2>
 
@@ -43,7 +44,7 @@
         </div>
 
         <div id=result-div>
-            <hr>
+         <hr>   
             <p id=result-text></p>
         </div>
     </div>
@@ -53,19 +54,19 @@
         <h2>Quiz Completed!</h2>
         <p>Your score is: <span id=score></span>.</p>
         <form class="inline-form" id="submission-form">
-              <label for="name">Enter your name: </label>
-              <input type="text" id="name">
-              <button id="submit-button" class="button">Submit</button>
+            <label for="name">Your Name: </label>
+                <input type="text" id="PersonName">
+            <button id="submit-button" class="button">Submit</button>
         </form>
     </div>
-
+<!-- Leaderboard-->
     <div hidden id="leaderboard" class="card">
-        <h2>Highscores</h2>
+        <h2>Leader Board</h2>
         <ol id="highscore-list">
         </ol>
         <div class="inline-buttons">
-            <button id="back-button" class="button">Go Back</button>
-            <button id="clear-button" class="button">Clear Highscores</button>
+            <button id="back-button" class="button">Start Again</button>
+            <button id="clear-button" class="button">Clear LeaderBoard</button>
         </div>
     </div>
 

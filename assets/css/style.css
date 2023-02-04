@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +7,187 @@
 }
 
 h1 {
-    background-color: aqua;
+    background-color: rgb(145, 155, 155);
     
 }
+
+h2 {
+    color: #218380;
+}
+
+/* Body Styles */
+
+body {
+    font-family:'Poppins', sans-serif;
+    background-color: #afeea7;
+    margin: 0px;
+  }
+  
+  /* Header Styles  */
+  
+  header {
+    /*display: flex;
+    justify-content: space-between;
+    
+    background-color: #33633b;
+    color: #ffffff;
+    padding: 5vh;*/
+    display: flex;
+      z-index: 3;
+      height: 100px;
+      padding: 0 40px;
+      background: #18580e;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 5px 5px 0 0;
+      box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+
+  }
+
+
+  /* specify min-width for time element to give enough space for the span inside it to contain 3 digits without visibly moving the "time" text */
+  
+  #time {
+    min-width:80px;
+    color: red;
+  }
+  
+  /* Main*/
+  
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Button*/
+  
+  .button {
+    display:block;
+    color:rgb(239, 248, 248);
+    background-color: #218380;
+    padding: 2vh;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+
+  .inline-buttons {
+    display: inline-flex;
+    cursor: pointer;
+  }
+  
+  /* Card Styles */
+  
+  .card {
+    max-width: 80%;
+    margin-top: 10vh;
+    border: solid rgb(241, 133, 133);
+    background-color: rgb(236, 239, 178);
+    border-width: 3px;
+    padding: 7vw;
+    border-radius: 70px;
+    box-shadow: 10px 5px 5px rgb(143, 123, 123);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  /* Start Card Styles */
+  
+  #start-screen {
+    display: inline;
+    text-align: center;
+    
+  }
+  #leaderboard-link {
+    color: #a4d8d6;
+    text-align: center;
+  }
+  
+  /* Question Card Styles */
+  
+  .option-button {
+    margin: 4px;
+    width: 90%;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  #result-text {
+    color: red;
+    position: fixed;
+
+  }
+  
+  /* Score Card Styles */
+  
+    .inline-form {
+      
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    color: #18580e;
+    
+  }
+
+  .submission-form {
+      
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #name {
+    color: #18580e;;
+  }
+  
+    #initials {
+    width: 25%;
+    margin: 8px;
+    padding: 1vh;
+    }
+
+  
+  #back-button {
+    margin-right: 8px;
+    cursor: pointer;
+    color: ;
+  }
+  
+  .highscore-list {
+    padding-inline-start: 20px;
+    background-color: #0d1a19;
+  }
+
+
+  button:hover {
+    background-color: rgba(33, 131, 127, 0.5);
+  }
+
+  
+  /* Media Queries */
+
+  @media screen and (min-width: 850px) {
+    .card {
+      max-width: 680px;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .card {
+      max-width: 680px;
+    }
+  }
+  
+  /* Media query that specifies devices that can utilize hover */
+  @media (hover) { max-width: 1200;
+    a:hover {
+      color: #cbe1e0;
+    }
+  }
+  
+  

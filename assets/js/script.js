@@ -169,3 +169,120 @@ function hideCards() {
     scoreCard.removeAttribute("hidden");
     score.textContent = time;
   }
+
+  // Leaderboard section
+
+  const submitButton = document.querySelector("#submit-button");
+  const inputElement = document.querySelector("#PersonName");
+  
+  //store user name and score when submit button is clicked
+  submitButton.addEventListener("click", storeScore);
+  
+  function storeScore(event) {
+    //prevent default behaviour of form submission
+    event.preventDefault();
+  
+    //check for input
+    if (!inputElement.value) {
+      alert("Please enter your name before pressing submit!");
+      return;
+    }
+  
+    //store score and name in an object
+    let leaderboardItem = {
+      initials: inputElement.value,
+      score: time,
+    };
+  
+    updateStoredLeaderboard(leaderboardItem);
+  
+    //hide the question card, display the leaderboard
+    hideCards();
+    leaderboardCard.removeAttribute("hidden");
+  
+    renderLeaderboard();
+  }
+  
+  //updates the leaderboard stored in local storage
+  function updateStoredLeaderboard(leaderboardItem) {
+    let leaderboardArray = getLeaderboard();
+    //append new leaderboard item to leaderboard array
+    leaderboardArray.push(leaderboardItem);
+    localStorage.setItem("leaderboardArray", JSON.stringify(leaderboardArray));
+  }
+  
+  //get "leaderboardArray" from local storage (if it exists) and parse it into a javascript object using JSON.parse
+  function getLeaderboard() {
+    let storedLeaderboard = localStorage.getItem("leaderboardArray");
+    if (storedLeaderboard !== null) {
+      let leaderboardArray = JSON.parse(storedLeaderboard);
+      return leaderboardArray;
+    } else {
+      leaderboardArray = [];
+    }
+    return leaderboardArray;
+  }
+  
+  //display leaderboard on leaderboard card
+  function renderLeaderboard() {
+    let sortedLeaderboardArray = sortLeaderboard();
+    const highscoreList = document.querySelector("#highscore-list");
+    highscoreList.innerHTML = "";
+    for (let i = 0; i < sortedLeaderboardArray.length; i++) {
+      let leaderboardEntry = sortedLeaderboardArray[i];
+      let newListItem = document.createElement("li");
+      newListItem.textContent =
+        leaderboardEntry.initials + " - " + leaderboardEntry.score;
+      highscoreList.append(newListItem);
+    }
+  }
+  
+  //sort leaderboard array from highest to lowest
+  function sortLeaderboard() {
+    let leaderboardArray = getLeaderboard();
+    if (!leaderboardArray) {
+      return;
+    }
+  
+    leaderboardArray.sort(function (a, b) {
+      return b.score - a.score;
+    });
+    return leaderboardArray;
+  }
+  
+  const clearButton = document.querySelector("#clear-button");
+  clearButton.addEventListener("click", clearHighscores);
+  
+  //clear local storage and display empty leaderboard
+  function clearHighscores() {
+    localStorage.clear();
+    renderLeaderboard();
+  }
+  
+  const backButton = document.querySelector("#back-button");
+  backButton.addEventListener("click", returnToStart);
+  
+  //Hide leaderboard card show start card
+  function returnToStart() {
+    hideCards();
+    startCard.removeAttribute("hidden");
+  }
+  
+  //use link to view highscores from any point on the page
+  const leaderboardLink = document.querySelector("#leaderboard-link");
+  leaderboardLink.addEventListener("click", showLeaderboard);
+  
+  function showLeaderboard() {
+    hideCards();
+    leaderboardCard.removeAttribute("hidden");
+  
+    //stop countdown
+    clearInterval(intervalID);
+  
+    //assign undefined to time and display that, so that time does not appear on page
+    time = undefined;
+    displayTime();
+  
+    //display leaderboard on leaderboard card
+    renderLeaderboard();
+  }
