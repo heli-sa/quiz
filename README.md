@@ -86,14 +86,59 @@ Clear LeaderBoard
 * Testing
 <insert content here>
 
+
+Technology
+
+
+Github- software hosting platform to keep the project in a remote location
+
+Gitpod - a development hosting platform
+
+Git - used for version control.
+
+
+
+Validators:
+
+jshint
+
+validator.w3.org
+
+jigsaw.w3.org/css-validator
+https://codebeautify.org/cssvalidate
+https://webaim.org/
+
 * Deployment
 * Previous Iterations and Bugs
 * Future Aspirations
 * Tools used and Coding Inspiration
+
+Chrome Dev Tools 
+- used to view responsiveness and layout as the site was being developed. I found this very useful when developing the site, as it aided my learning throughout the project.
 <add reference links to 4 quiz's>
+
+HTML5 - A programming language for structuring the site.
+
+CSS3- Style sheet programming language.
+
+JavaScript - A scripting language that enables the creation of dynamically updating content.
+
+Font Awesome -used to provide icon to the result-box.
+
+Google fonts -used to select and provide typography.
 
 Questions for quiz
 Sample Question
 
+References
+Quizzes
+https://www.youtube.com/watch?v=MxrGPP4F8Sc
+https://www.youtube.com/watch?v=riDzcEQbX6k
+https://www.youtube.com/watch?v=f4fB9Xg2JEY
+https://github.com/stephje/javascript-quiz
 [Quiz questions and answers](https://triviaquiznight.com/easy-general-knowledge-questions-and-answers/)
 (<https://kwizzbit.com/50-general-knowledge-quiz-questions-and-answers/>)
+Data Import JSON
+https://www.youtube.com/watch?v=lO1d-pXeJW4
+https://github.com/iamevenstronger/quiz
+https://iamevenstronger.github.io/quiz/index.html
