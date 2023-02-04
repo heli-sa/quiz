@@ -183,7 +183,10 @@ Fonts chosen: 'Poppins', sans-serif;
 * <https://github.com/iamevenstronger/quiz>
 * <https://iamevenstronger.github.io/quiz/index.html>
 
-
+Randomisation of arrays in javascript
+https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html
+https://javascript.info/task/shuffle
+https://www.webmound.com/shuffle-javascript-array/
 
 
 - https://www.screenpresso.com/

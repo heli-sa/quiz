@@ -38,9 +38,19 @@ const questions = [
     answer: "4. Black, green, blue, white and red",
   },
   {
-      questionText: "Which of the following sports does not use a ball?",
-      options: ["1. Tennis", "2. Golf", "3. Ice-Hockey", "4. Polo"],
-      answer: "3. Ice-Hockey",
+    questionText: "Which of the following sports does not use a ball?",
+    options: ["1. Tennis", "2. Golf", "3. Ice-Hockey", "4. Polo"],
+    answer: "3. Ice-Hockey",
+  },
+  {
+    questionText: "What color is found on 75% of the world’s flags?",
+    options: ["1. White", "2. Blue", "3. Green", "4. Red"],
+    answer: "4. Red",
+  },
+  {
+    questionText: "What is the White House Number in Pennsylvania Avenue NW?",
+    options: ["1. 1600", "2. 1670", "3. 1640", "4. 1610"],
+    answer: "1. 1600",
   },
 ];
 // Create Global variables to display questions, scorecard, leaderboard
@@ -57,7 +67,8 @@ const score = document.querySelector("#score");
 var intervalID;
 var time;
 var currentQuestion;
-
+// Total number of questions in the Quiz (totalQuestions = questions-1)
+var totalQuestions = 4;
 //empty array to hold shuffled selected 
 let randomQuestions = [];
 
@@ -77,7 +88,7 @@ function hideCards() {
 function shuffleQuestions() { 
     //function to shuffle and push 10 questions to shuffledQuestions array
 //app would be dealing with 10questions per session
-    while (randomQuestions.length <= 2) {
+    while (randomQuestions.length <= totalQuestions) {
         const random = questions[Math.floor(Math.random() * questions.length)]
         if (!randomQuestions.includes(random)) {
           randomQuestions.push(random)
