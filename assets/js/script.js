@@ -24,21 +24,21 @@
 //store question text, options and answers in an array
 // Note: put option in code to read this array from JSON file (time permitting)
 const questions = [
-    {
-      questionText: "Question 1 - First Question",
+  {
+    questionText: "Question 1 - First Question",
+    options: ["1. ans1", "2. ans2", "3. ans3", "4. ans4"],
+    answer: "3. ans3",
+  },
+  {
+    questionText: "Question 2 Second Question",
+    options: ["1. ans1", "2. ans2", "3. ans3", "4. ans4"],
+    answer: "4. ans4",
+  },
+  {
+      questionText: "Question 3 Third Question",
       options: ["1. ans1", "2. ans2", "3. ans3", "4. ans4"],
-      answer: "3. ans3",
-    },
-    {
-      questionText: "Question 2 Second Question",
-      options: ["1. ans1", "2. ans2", "3. ans3", "4. ans4"],
-      answer: "4. ans4",
-    },
-    {
-        questionText: "Question 3 Third Question",
-        options: ["1. ans1", "2. ans2", "3. ans3", "4. ans4"],
-        answer: "2. ans2",
-    },
+      answer: "2. ans2",
+  },
 ];
 
 // Create Global variables to display questions, scorecard, leaderboard
@@ -50,6 +50,8 @@ const leaderboardCard = document.querySelector("#leaderboard");
 const resultDiv = document.querySelector("#result-div");
 const resultText = document.querySelector("#result-text");
 const timeDisplay = document.querySelector("#time");
+const score = document.querySelector("#score");
+  
 var intervalID;
 var time;
 var currentQuestion;
@@ -61,33 +63,36 @@ function hideCards() {
     scoreCard.setAttribute("hidden", true);
     leaderboardCard.setAttribute("hidden", true);
   }
-
-// Start Quiz
-document.querySelector("#start-button").addEventListener("click", startQuiz);
-
-function startQuiz() {
-  //hide any visible cards, show the question card - log to console function started
-  console.log("Quiz Started");
-
-  hideCards();
-  questionCard.removeAttribute("hidden");
-
-  //assign 0 to currentQuestion when start button is clicked, then display the current question on the page
-  currentQuestion = 0;
-  displayQuestion();
-
-  //set total time depending on number of questions
-  time = questions.length * 10;
-
-  //executes function "countdown" every 1000ms to update time and display on page
-  intervalID = setInterval(countdown, 1000);
-
-  //invoke displayTime here to ensure time appears on the page as soon as the start button is clicked, not after 1 second
-  displayTime();
-}
-
-//reduce time by 1 and display new value, if time runs out then end quiz
-function countdown() {
+  
+  //hide result div
+  function hideResultText() {
+    resultDiv.style.display = "none";
+  }
+  
+  // Start Quiz
+  document.querySelector("#start-button").addEventListener("click", startQuiz);
+  
+  function startQuiz() {
+    //hide any visible cards, show the question card
+    hideCards();
+    questionCard.removeAttribute("hidden");
+  
+    //assign 0 to currentQuestion when start button is clicked, then display the current question on the page
+    currentQuestion = 0;
+    displayQuestion();
+  
+    //set total time depending on number of questions
+    time = questions.length * 10;
+  
+    //executes function "countdown" every 1000ms to update time and display on page
+    intervalID = setInterval(countdown, 1000);
+  
+    //invoke displayTime here to ensure time appears on the page as soon as the start button is clicked, not after 1 second
+    displayTime();
+  }
+  
+  //reduce time by 1 and display new value, if time runs out then end quiz
+  function countdown() {
     time--;
     displayTime();
     if (time < 1) {
@@ -95,7 +100,12 @@ function countdown() {
     }
   }
   
-function displayQuestion() {
+  //display time on page
+  function displayTime() {
+    timeDisplay.textContent = time;
+  }
+  //display the question and answer options for the current question
+  function displayQuestion() {
     let question = questions[currentQuestion];
     let options = question.options;
   
@@ -110,17 +120,11 @@ function displayQuestion() {
     }
   }
 
-function displayTime() {
-  timeDisplay.textContent = time;
-}
-
-// check which option(button) selected and pass to checkAnswer function
-document.querySelector("#quiz-options").addEventListener("click", checkAnswer);
-
-
-
-//Compare the text content of the option button with the answer to the current question
-function optionIsCorrect(optionButton) {
+  // check which option(button) selected and pass to checkAnswer function
+  document.querySelector("#quiz-options").addEventListener("click", checkAnswer);
+  
+  //Compare the text content of the option button with the answer to the current question
+  function optionIsCorrect(optionButton) {
     return optionButton.textContent === questions[currentQuestion].answer;
   }
   
@@ -157,7 +161,7 @@ function optionIsCorrect(optionButton) {
   }
   
   //at end of quiz, clear the timer, hide any visible cards and display the scorecard and display the score as the remaining time
-function endQuiz() {
+  function endQuiz() {
     clearInterval(intervalID);
     hideCards();
     scoreCard.removeAttribute("hidden");
