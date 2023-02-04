@@ -13,6 +13,59 @@
 
 </head>
 <body>
-    <h1>Quiz Title</h1>
+    <header>Quiz Title</header>
 </body>
+<section>
+    <!-- Instructions Card-->
+    <div id=instructions class="card">
+        <h2 id=title>General Knowledge Quiz</h2>
+        <p>Click Start to begin...<br><br></p>
+        <button id=start-button class="button">Start Quiz</button>
+    </div>
+
+    <!-- Card to display question-->
+
+    <div hidden id=question class="card">
+
+        <h2 id=question-text></h2>
+
+        <div id=quiz-answers>
+            <button id=optionA class="button option-button"></button>
+            <button id=optionB class="button option-button"></button>
+            <button id=optionC class="button option-button"></button>
+            <button id=optionD class="button option-button"></button>
+        </div>
+
+        <div id=result-div>
+            <hr>
+            <p id=result-text></p>
+        </div>
+    </div>
+    <!--Card to display Score -->
+
+    <div hidden id=scorecard class="card">
+        <h2>Quiz Completed!/h2>
+        <p>Your score is: <span id=score></span>.</p>
+        <form class="inline-form" id="submission-form">
+              <label for="name">Enter your name: </label>
+              <input type="text" id="name">
+              <button id="submit-button" class="button">Submit</button>
+        </form>
+    </div>
+
+    <div hidden id=leaderboard class="card">
+        <h2>Highscores</h2>
+        <ol id="highscore-list">
+        </ol>
+        <div class="inline-buttons">
+            <button id="back-button" class="button">Go Back</button>
+            <button id="clear-button" class="button">Clear Highscores</button>
+        </div>
+    </div>
+
+
+
+
+</section>
+
 </html>
