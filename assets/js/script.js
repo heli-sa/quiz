@@ -35,7 +35,7 @@ const questions = [
               "2. Blue, green,yellow,black and white", 
               "3. Green, white yellow, red and blue", 
               "4. Black, green, blue, white and red"],
-    answer: "4. Black, green, blue, white and red",
+    answer: "1. Black, green, blue, white and red",
   },
   {
     questionText: "Which of the following sports does not use a ball?",

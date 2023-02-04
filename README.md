@@ -14,9 +14,9 @@ This site was developed for Educational purposes
 
 * Introduction
 
- Welcome to my very first game! For this project I have chosen a simple quiz.
+Welcome to my very first game! For this project I have chosen a simple quiz.
 
- User Story
+User Story
 
 * Introduction Screen & Explanation
 * User Clicks Start to begin the quiz.
@@ -31,7 +31,8 @@ This website was built as part of the learning material for Code Institute's Ful
 
 ***
 
-* Design Goals
+Design Goals
+
 * The design goals of this project is develop a simple responsive quiz, where the user completes multiple choice questions.
 
 * Design Features
@@ -43,50 +44,52 @@ This website was built as part of the learning material for Code Institute's Ful
 * Access to settings menu, to configure the game
 * Question list stored in an array. Option to read in file which separately stores the questions.
 
-Font/Color Choices
+* Font/Color Choices
 As this is a game/quiz.
 
 ### Color choice
 
-
 <do research on colours for games>
 
-* Wireframes
+### Wireframes
 
 Wireframes of the user interface for Mobile & Desktop using balsamic.
 
-Development
-Outline functionality/pseudocode
+### Development
+
+* Outline functionality/pseudo code
 HTML
-Webpage to display introduction
-Webpage to display a Question (which is dynamically loaded with javascript)
-Webpage to display results
-Header/Navigation bar
-Webpage for settings
-Webpage for leaderboard
+* Webpage to display introduction
+* Webpage to display a Question (which is dynamically loaded with javascript)
+* Webpage to display results
+* Header/Navigation bar
+* Webpage for settings
+* Webpage for leaderboard
 
 CSS
 Minimal styling was used on this project. Allowing the user to focus on the questions.
 
 Javascript
-Variables
-Array to store questions
-Timer, Username
+
+* Variables
+* Array to store questions
+* Timer, Username
 
 Functions
-Load questions
-GetUserName
-Display first question
-Randomisation of questions (on/off)
-Start Quiz
-Start Timer
-Stop Timer
-Timer Set Time for Quiz
-GotoNextQuestion
-ShowAnswer
-Listener for Start Button
-Listener for Next Button
-Create LeaderBoard
+
+* Load questions
+* GetUserName
+* Display first question
+* Randomization of questions (on/off)
+* Start Quiz
+* Start Timer
+* Stop Timer
+* Timer Set Time for Quiz
+* GotoNextQuestion
+* ShowAnswer
+* Listener for Start Button
+* Listener for Next Button
+* Create LeaderBoard
 Update LeaderBoard
 Clear LeaderBoard
 
@@ -151,13 +154,13 @@ Fonts chosen: 'Poppins', sans-serif;
 
 ## References
 
-- [w3school](https://www.w3schools.com/css/>)
-- [markdownguide](https://www.markdownguide.org/cheat-sheet/)
-- [webdesign.tutsplus](https://webdesign.tutsplus.com/)
-- [geeksforgeeks](https://www.geeksforgeeks.org/)
-- [scrimba](https://scrimba.com/)
-- [whatimarkdown](https://whatismarkdown.com/category/)
-- [javascript](https://p5js.org/)
+* [w3school](https://www.w3schools.com/css/>)
+* [markdownguide](https://www.markdownguide.org/cheat-sheet/)
+* [webdesign.tutsplus](https://webdesign.tutsplus.com/)
+* [geeksforgeeks](https://www.geeksforgeeks.org/)
+* [scrimba](https://scrimba.com/)
+* [whatimarkdown](https://whatismarkdown.com/category/)
+* [javascript](https://p5js.org/)
 
 ---
 
@@ -184,24 +187,25 @@ Fonts chosen: 'Poppins', sans-serif;
 * <https://iamevenstronger.github.io/quiz/index.html>
 
 Randomisation of arrays in javascript
-https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html
-https://javascript.info/task/shuffle
-https://www.webmound.com/shuffle-javascript-array/
+<https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html>
+<https://javascript.info/task/shuffle>
+<https://www.webmound.com/shuffle-javascript-array/>
 
-
-- https://www.screenpresso.com/
+* <https://www.screenpresso.com/>
 
 Used for color choices
-* https://www.color-hex.com/
+
+* <https://www.coolors.co/>
 
 ### Deployment of Website
+
 ***
 Using Github Pages to host the deployed website can be found here:
-> https://heli-sa.github.io/quiz/
-## Manual tesing- UI__
-- README in GitHub repository describing the project
-- Code Institute Template with Gitpod
-- Visually all pages must have a correct layout and readable text
+> <https://heli-sa.github.io/quiz/>
 
-- Menu on each page must contain links to Home, Gallery and  Our News
-- All colors are exactly same as showed in color pallette
+## Manual tesing- UI__
+
+* README in GitHub repository describing the project
+* Code Institute Template with Gitpod
+* Visually all pages must have a correct layout and readable text
+* All colors are exactly same as showed in color pallette

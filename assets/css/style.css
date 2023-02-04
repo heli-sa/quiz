@@ -7,7 +7,7 @@
 }
 
 h1 {
-    background-color: rgb(145, 155, 155);
+    color: lightcoral;
     
 }
 
@@ -26,17 +26,11 @@ body {
   /* Header Styles  */
   
   header {
-    /*display: flex;
-    justify-content: space-between;
-    
-    background-color: #33633b;
-    color: #ffffff;
-    padding: 5vh;*/
     display: flex;
       z-index: 3;
       height: 100px;
       padding: 0 40px;
-      background: #18580e;
+      background: #1c6d7d;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -66,16 +60,19 @@ body {
   .button {
     display:block;
     color:rgb(239, 248, 248);
-    background-color: #218380;
+    background-color:#218380;
     padding: 2vh;
     border-radius: 8px;
+    border-color: darkolivegreen;
     cursor: pointer;
     
 }
 
   .inline-buttons {
+    color: rgb(239, 248, 248);
     display: inline-flex;
     cursor: pointer;
+    border-color: darkolivegreen;
   }
   
   /* Card Styles */
@@ -83,9 +80,9 @@ body {
   .card {
     max-width: 80%;
     margin-top: 10vh;
-    border: solid rgb(241, 133, 133);
+    border: solid lightcoral;
     background-color: rgb(236, 239, 178);
-    border-width: 3px;
+    border-width: 4px;
     padding: 7vw;
     border-radius: 70px;
     box-shadow: 10px 5px 5px rgb(143, 123, 123);
@@ -105,8 +102,9 @@ body {
     
   }
   #leaderboard-link {
-    color: #a4d8d6;
-    text-align: center;
+    color: lightcoral;
+    text-transform: uppercase;
+    
   }
   
   /* Question Card Styles */
@@ -131,7 +129,8 @@ body {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    color: #18580e;
+    color: #218380;
+    
     
   }
 
@@ -140,9 +139,11 @@ body {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    text-transform: none;
   }
   #name {
-    color: #18580e;;
+    color: black;
+    
   }
   
     #initials {
