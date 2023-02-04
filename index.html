@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Quiz - Portfolio 2</title>
-    <!-- <script defer src="/assets/js/script.js"></script> -->
+    <script defer src="/assets/js/script.js"></script>
     <meta name="description" content="quiz, questions-answers ">
     <meta name="keywords" content="quiz">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -14,6 +14,11 @@
 </head>
 <body>
     <header>Quiz Title</header>
+    <a id=leaderboard-link>View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
+    </i></a>     
+    <time>Time: <span id="time"></span></time>
+</header>
+
 </body>
 <section>
     <!-- Instructions Card-->
@@ -29,11 +34,11 @@
 
         <h2 id=question-text></h2>
 
-        <div id=quiz-answers>
-            <button id=optionA class="button option-button"></button>
-            <button id=optionB class="button option-button"></button>
-            <button id=optionC class="button option-button"></button>
-            <button id=optionD class="button option-button"></button>
+        <div id=quiz-options>
+            <button id=option0 class="button option-button"></button>
+            <button id=option1 class="button option-button"></button>
+            <button id=option2 class="button option-button"></button>
+            <button id=option3 class="button option-button"></button>
         </div>
 
         <div id=result-div>
@@ -44,7 +49,7 @@
     <!--Card to display Score -->
 
     <div hidden id=scorecard class="card">
-        <h2>Quiz Completed!/h2>
+        <h2>Quiz Completed!</h2>
         <p>Your score is: <span id=score></span>.</p>
         <form class="inline-form" id="submission-form">
               <label for="name">Enter your name: </label>
@@ -53,7 +58,7 @@
         </form>
     </div>
 
-    <div hidden id=leaderboard class="card">
+    <div hidden id="leaderboard" class="card">
         <h2>Highscores</h2>
         <ol id="highscore-list">
         </ol>
