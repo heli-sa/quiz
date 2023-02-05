@@ -95,9 +95,40 @@ Clear LeaderBoard
 
 * Testing
 
+Functional Testing:
+
 Randomisation on/off
-Manual testing was carried out on the Quiz with Randomization turned off.
-Randomisation was turned on at the end, and a number of test passes were completed to confirm that the questions appeared randomly.
+Automated  testing was carried out on the Quiz with Randomization turned off. The automated testing was completed using the Lighthouse recorder. A number of recordals were created to complete the testing of questions, with answers all being correct, answers all being wrong and a mixture of right and wrong.
+
+Randomisation was turned on at the end, and a number of manual test passes were completed to confirm that the questions appeared randomly. When the automated scripts are run against random questions the scripts fail as expected, as the question order changes upon each playback.
+
+Manual Testing:
+
+Note: There are 10 questions within this Quiz.
+
+Open Quiz website with the link provided.
+Click on LeaderBoard  Expected Result: This should be empty on the first execution of this step.
+Click on Start Again  Expected Result: Simple Quiz Page appears
+Click on Start Quiz   Expected Result: First Question Appears
+Check Time is decreasing
+
+Test Pass 1: Answer all questions correctly referencing the questions and answers in the javascript code.
+Test Pass 2: Answer all questions incorrectly referencing the questions and answers in the javascript code.
+Test Pass 2: Answer some questions incorrectly and correctly referencing the questions and answers in the javascript code.
+
+When an Answer is answered incorrectly. Expected Result Time is reduced by 10 seconds.
+
+Quiz Completed Page
+
+Click on Submit Expected Result Alert Appears as the "Your Name" input is a required field.
+Enter Username in "Your Name:" input field and Click on Submit Expected Result Leader Board appears
+with Username and Score of completed Quiz.
+Click on "Clear LeaderBoard" Button Expected Result - Entries on Leaderboard are removed.
+ 
+
+
+
+
 
 Technology
 
