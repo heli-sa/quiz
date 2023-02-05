@@ -94,7 +94,6 @@ Update LeaderBoard
 Clear LeaderBoard
 
 * Testing
-<insert content here>
 
 Randomisation on/off
 Manual testing was carried out on the Quiz with Randomization turned off.
@@ -102,19 +101,25 @@ Randomisation was turned on at the end, and a number of test passes were complet
 
 Technology
 
-Github- software hosting platform to keep the project in a remote location
+* Github- software hosting platform to keep the project in a remote location
 
-Gitpod - a development hosting platform
+* Gitpod - a development hosting platform
 
-Git - used for version control.
+* Git - used for version control.
 
 Validators:
 
-jshint
+* jshint
+https://jshint.com/
 
-validator.w3.org
+Warnings for const and let were ignored as this appears to be a configuration issue with the linter. I didn't have the time to investigate this further.
+https://stackoverflow.com/questions/54647294/const-is-available-in-es6-use-esversion-6
+* validator.w3.org
+CSS and HTML code was checked with validator on w3. Screenshots of the results are as follows:
 
-jigsaw.w3.org/css-validator
+Lighthouse testin was completed within the Chrome DevTools.
+
+* jigsaw.w3.org/css-validator
 <https://codebeautify.org/cssvalidate>
 <https://webaim.org/>
 
@@ -161,6 +166,7 @@ Fonts chosen: 'Poppins', sans-serif;
 * [scrimba](https://scrimba.com/)
 * [whatimarkdown](https://whatismarkdown.com/category/)
 * [javascript](https://p5js.org/)
+* [media query](https://jackdomleo.dev/blog/2020/hover-css-media-query/)
 
 ---
 
@@ -187,8 +193,9 @@ Fonts chosen: 'Poppins', sans-serif;
 * <https://iamevenstronger.github.io/quiz/index.html>
 
 Randomisation of arrays in javascript
-<https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html>
-<https://javascript.info/task/shuffle>
+
+* <https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html>
+* <https://javascript.info/task/shuffle>
 <https://www.webmound.com/shuffle-javascript-array/>
 
 * <https://www.screenpresso.com/>

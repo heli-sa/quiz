@@ -4,27 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Quiz - Portfolio 2</title>
-    <!-- <script defer src="/assets/js/test.js"></script> -->
     <script defer src="/assets/js/script.js"></script>
     <meta name="description" content="quiz, questions-answers ">
     <meta name="keywords" content="quiz">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/37be7f3450.js" crossorigin="anonymous"></script>
-
+    <title>Basic Quiz - Portfolio 2</title>
 </head>
 <body>
-    <header><h1>Test Yourself!</h1>
-    <a id=leaderboard-link>Leader Board</a>     
-    
+    <header>
+        <h1>Test Yourself!</h1>
+        <a id="leaderboard-link">Leader Board</a>     
+    </header>
 
-</header>
-
-</body>
 <section>
     <!-- Instructions Card-->
     <div id=instructions class="card">
-        <h2 id=title>General Knowledge Quiz</h2>
+        <h2 id=title>Simple Quiz</h2>
         <p>Click Start to begin...<br><br></p>
         <button id=start-button class="button">Start Quiz</button>
     </div>
@@ -32,10 +28,9 @@
     <!-- Card to display question-->
 
     <div hidden id=question class="card">
-        <time>Time: <span id="time"></span></time>
+        <h3>Time: <span id="time"></span> </h3>
 
-        <h2 id=question-text></h2>
-
+        <h2 id=question-text>place holder text</h2>
         <div id=quiz-options>
             <button id=option0 class="button option-button"></button>
             <button id=option1 class="button option-button"></button>
@@ -44,7 +39,7 @@
         </div>
 
         <div id=result-div>
-         <hr>   
+        
             <p id=result-text></p>
         </div>
     </div>
@@ -54,7 +49,7 @@
         <h2>Quiz Completed!</h2>
         <p>Your score is: <span id=score></span>.</p>
         <form class="inline-form" id="submission-form">
-            <label for="name">Your Name: </label>
+            <label>Your Name: </label>
                 <input type="text" id="PersonName">
             <button id="submit-button" class="button">Submit</button>
         </form>
@@ -69,6 +64,6 @@
             <button id="clear-button" class="button">Clear LeaderBoard</button>
         </div>
     </div>
-
-</section>
+    </section>
+</body>
 </html>

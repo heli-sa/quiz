@@ -24,35 +24,61 @@
 //store question text, options and answers in an array
 // Note: put option in code to read this array from JSON file (time permitting)
 const questions = [
-  {
-    questionText: "Question 1 - How many days are in a leap year?",
-    options: ["1. 355 days", "2. 366 days", "3. 359 days", "4. 364 days"],
-    answer: "2. 366 days",
-  },
-  {
-    questionText: "Which five colors make up the Olympic rings?",
-    options: ["1. Black, green, blue, yellow and red", 
-              "2. Blue, green,yellow,black and white", 
-              "3. Green, white yellow, red and blue", 
-              "4. Black, green, blue, white and red"],
-    answer: "1. Black, green, blue, white and red",
-  },
-  {
-    questionText: "Which of the following sports does not use a ball?",
-    options: ["1. Tennis", "2. Golf", "3. Ice-Hockey", "4. Polo"],
-    answer: "3. Ice-Hockey",
-  },
-  {
-    questionText: "What color is found on 75% of the world’s flags?",
-    options: ["1. White", "2. Blue", "3. Green", "4. Red"],
-    answer: "4. Red",
-  },
-  {
-    questionText: "What is the White House Number in Pennsylvania Avenue NW?",
-    options: ["1. 1600", "2. 1670", "3. 1640", "4. 1610"],
-    answer: "1. 1600",
-  },
-];
+    {
+      questionText: "Question 1 - How many days are in a leap year?",
+      options: ["1. 355 days", "2. 366 days", "3. 359 days", "4. 364 days"],
+      answer: "2. 366 days",
+    },
+    {
+      questionText: "Which five colors make up the Olympic rings?",
+      options: ["1. Black, green, blue, yellow and red", 
+                "2. Blue, green,yellow,black and white", 
+                "3. Green, white yellow, red and blue", 
+                "4. Black, green, blue, white and red"],
+      answer: "4. Black, green, blue, white and red",
+    },
+    {
+      questionText: "Which of the following sports does not use a ball?",
+      options: ["1. Tennis", "2. Golf", "3. Ice-Hockey", "4. Polo"],
+      answer: "3. Ice-Hockey",
+    },
+    {
+      questionText: "What color is found on 75% of the world’s flags?",
+      options: ["1. White", "2. Blue", "3. Green", "4. Red"],
+      answer: "4. Red",
+    },
+    {
+      questionText: "What is the White House Number in Pennsylvania Avenue NW?",
+      options: ["1. 1600", "2. 1670", "3. 1640", "4. 1610"],
+      answer: "1. 1600",
+    },
+    {
+      questionText: "Porphyria is the fear of what?",
+      options: ["1. Spiders", "2. Fire", "3. Doors", "4. Stars"],
+      answer: "2. Fire",
+    },
+    {
+      questionText: "What is zero points in tennis known as?",
+      options: ["1. Love", "2. Lose", "3. Gone", "4. Hit"],
+      answer: "1. Love",
+    },
+    {
+      questionText: " Which country is the origin of the cocktail Mojito?",
+      options: ["1. Mexico", "2. Argentina", "3. Cuba", "4. Panama"],
+      answer: "3. Cuba",
+    },
+    {
+      questionText: " Which region produces the most apples?",
+      options: ["1. South Europe", "2. Central Asia", "3. North Africa", "4. Eurasia"],
+      answer: "2. Central Asia",
+    },
+    {
+      questionText: " What color is mollusk blood?",
+      options: ["1. pink", "2. red", "3. blue", "4. White"],
+      answer: "3. blue",
+    },
+  ];
+  
 // Create Global variables to display questions, scorecard, leaderboard
 // Time, intervalID
 const startCard = document.querySelector("#instructions");
@@ -68,7 +94,7 @@ var intervalID;
 var time;
 var currentQuestion;
 // Total number of questions in the Quiz (totalQuestions = questions-1)
-var totalQuestions = 4;
+var totalQuestions = 9;
 //empty array to hold shuffled selected 
 let randomQuestions = [];
 
@@ -89,9 +115,9 @@ function shuffleQuestions() {
     //function to shuffle and push 10 questions to shuffledQuestions array
 //app would be dealing with 10questions per session
     while (randomQuestions.length <= totalQuestions) {
-        const random = questions[Math.floor(Math.random() * questions.length)]
+        const random = questions[Math.floor(Math.random() * questions.length)];
         if (!randomQuestions.includes(random)) {
-          randomQuestions.push(random)
+          randomQuestions.push(random);
         }
     }
 }
@@ -319,3 +345,6 @@ function shuffleQuestions() {
     //display leaderboard on leaderboard card
     renderLeaderboard();
   }
+
+
+  

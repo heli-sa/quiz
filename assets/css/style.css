@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
 * {
     margin: 0;
@@ -7,7 +7,7 @@
 }
 
 h1 {
-    color: lightcoral;
+    color: white;
     
 }
 
@@ -61,11 +61,19 @@ body {
     display:block;
     color:rgb(239, 248, 248);
     background-color:#218380;
-    padding: 2vh;
+    padding: 1rem;
     border-radius: 8px;
     border-color: darkolivegreen;
     cursor: pointer;
-    
+}
+
+#start-button {
+    display:block;
+    color:rgb(239, 248, 248);
+    padding: 2vh;
+    border-radius: 8px;
+    border-color: white;
+    cursor: pointer;
 }
 
   .inline-buttons {
@@ -93,7 +101,9 @@ body {
     transform: translate(-50%, -50%);
     
   }
-  
+
+
+
   /* Start Card Styles */
   
   #start-screen {
@@ -102,7 +112,7 @@ body {
     
   }
   #leaderboard-link {
-    color: lightcoral;
+    color: white;
     text-transform: uppercase;
     
   }
@@ -156,7 +166,6 @@ body {
   #back-button {
     margin-right: 8px;
     cursor: pointer;
-    color: ;
   }
   
   .highscore-list {
@@ -184,11 +193,17 @@ body {
     }
   }
   
-  /* Media query that specifies devices that can utilize hover */
-  @media (hover) { max-width: 1200;
-    a:hover {
-      color: #cbe1e0;
+  
+  @media (min-width: 768px) {
+    .button {
+      padding-right: 1rem;
+      cursor: pointer;
+    }
+
+  @media (hover: hover) {
+    .button {
+      padding-right: 1rem;
+      cursor: pointer;
     }
   }
-  
-  
+}
