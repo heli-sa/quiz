@@ -202,6 +202,11 @@ CSS and HTML code was checked with validator on w3. Screenshots of the results a
 ![HTML Validation](/assets/images/tests/html_validated.quiz.png)
 
 Lighthouse testing was completed within the Chrome DevTools.
+### Desktop Lighthouse
+![Desktop Lighthouse](/assets/images/tests/lighthouse_desktop.png)
+
+### Mobile Lighthouse
+![Mobile Lighthouse](/assets/images/tests/lighthouse_mobile.png)
 
 <https://codebeautify.org/cssvalidate>
 <https://webaim.org/>
@@ -211,7 +216,8 @@ Lighthouse testing was completed within the Chrome DevTools.
 The project was developed in Gitpod, linked to Gihub for version control.
 
 The webpage was deployed to the following location:
-<insert link>
+### Deployment URL on Github
+![Website Deployment](https://heli-sa.github.io/quiz/)
 
 * HTML5 - A programming language for structuring the site.
 
@@ -279,16 +285,10 @@ Fonts chosen: 'Poppins', sans-serif;
 * <https://javascript.info/task/shuffle>
 <https://www.webmound.com/shuffle-javascript-array/>
 
-Used for color choices and create the color pallet
+### Used for color choices and create the color pallet
 
 * <https://www.coolors.co/>
 
-Used fo screenshot
+### Used fo screenshot
 
 * <https://www.screenpresso.com/>
-
-### Deployment of Website
-
-***
-Using Github Pages to host the deployed website can be found here:
-> <https://heli-sa.github.io/quiz/>
